@@ -1,0 +1,651 @@
+.scroll-button {
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  font-size: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  position: absolute;
+  top: 50%; /* Center vertically */
+  transform: translateY(-50%);
+  z-index: 10; /* Ensure the buttons stay above other elements */
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+/* Hover effect for buttons */
+.scroll-button:hover {
+  background-color: rgba(0, 0, 0, 0.7);
+  transform: scale(1.1);
+}
+
+/* Left Button Positioning */
+.scroll-button.left {
+  left: 10px;
+}
+
+/* Right Button Positioning */
+.scroll-button.right {
+  right: 10px;
+}
+
+body {
+  background-color: #8ECAE6; /* Light Blue */
+  color: #023047; /* Dark Blue */
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Header */
+header {
+  background-color: #219EBC; /* Medium Blue */
+  color: #FFFFFF; /* White Text */
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header .logo p {
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  margin: 0 10px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #FFFFFF; /* White */
+  font-weight: 500;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #FFB703; /* Yellow-Orange Hover */
+}
+
+/* Full-Screen Gallery */
+.gallery-container {
+  width: 100vw;
+  height: 70vh;
+  position: relative;
+  overflow: hidden;
+  background: #8ECAE6; /* Light Blue */
+}
+
+.gallery {
+  display: flex;
+  height: 100%;
+  overflow-x: scroll;
+  scroll-behavior: smooth;
+}
+
+.gallery img {
+  height: 100%;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.scroll-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(33, 158, 188, 0.8); /* Semi-transparent Medium Blue */
+  color: white;
+  border: none;
+  padding: 15px;
+  cursor: pointer;
+  border-radius: 50%;
+  z-index: 10;
+  transition: background 0.3s ease;
+}
+
+.scroll-button:hover {
+  background: #023047; /* Dark Blue Hover */
+}
+
+.scroll-button.left {
+  left: 10px;
+}
+
+.scroll-button.right {
+  right: 10px;
+}
+
+/* Intro Sections */
+.intro-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+  background: #8ECAE6; /* Light Blue */
+}
+
+.intro-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  width: 100%;
+  gap: 20px;
+}
+
+.intro-text,
+.intro-image {
+  width: 50%;
+}
+
+.intro-text h2 {
+  color: #023047; /* Dark Blue */
+  font-size: 2rem;
+  margin-bottom: 15px;
+}
+
+.intro-text p {
+  color: #023047;
+  font-size: 1.1rem;
+}
+
+.intro-image {
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.intro-section-reverse .intro-content {
+  flex-direction: row-reverse;
+}
+
+/* News Section */
+.news-section {
+  padding: 20px;
+  background: #FFFFFF; /* White Background */
+  border-top: 5px solid #219EBC; /* Medium Blue Accent */
+}
+
+.news-section h2 {
+  text-align: center;
+  font-size: 2rem;
+  color: #023047; /* Dark Blue */
+  margin-bottom: 20px;
+}
+
+.news-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.news-article {
+  background: #8ECAE6; /* Light Blue */
+  border: 1px solid #219EBC; /* Medium Blue */
+  border-radius: 10px;
+  padding: 15px;
+  width: 300px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s ease;
+}
+
+.news-article:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+.news-article h3 {
+  font-size: 1.2rem;
+  color: #023047;
+}
+
+.news-article p {
+  font-size: 1rem;
+  color: #023047;
+  margin: 10px 0;
+}
+
+.news-article a {
+  text-decoration: none;
+  color: #219EBC; /* Medium Blue */
+  font-weight: bold;
+}
+
+.news-article a:hover {
+  color: #FFB703; /* Yellow-Orange Hover */
+  text-decoration: underline;
+}
+
+/* Contact Section */
+.contact-section {
+  padding: 40px 20px;
+  text-align: center;
+  background: #219EBC; /* Medium Blue */
+  color: #FFFFFF; /* White Text */
+}
+
+.contact-section h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #FFB703; /* Yellow-Orange */
+}
+
+.contact-section form {
+  max-width: 600px;
+  margin: 0 auto;
+  background: #FFFFFF;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 1rem;
+  color: #023047;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #8ECAE6; /* Light Blue Border */
+  border-radius: 5px;
+}
+
+.contact-button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  color: #FFFFFF;
+  background: #FFB703; /* Yellow-Orange */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.contact-button:hover {
+  background: #FB8500; /* Bright Orange Hover */
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #023047; /* Dark Blue */
+  color: #FFFFFF;
+}
+/* Navigation Bar */
+header {
+  background-color: #023047; /* Dark Blue for Header */
+  color: #FFFFFF; /* White Text */
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Slight shadow for better visual separation */
+}
+
+header .logo p {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #FFB703; /* Yellow-Orange for Logo */
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  margin: 0 10px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #8ECAE6; /* Light Blue for Default Links */
+  font-weight: bold;
+  font-size: 1rem;
+  padding: 8px 15px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+nav ul li a:hover {
+  background-color: #219EBC; /* Medium Blue Background on Hover */
+  color: #FFFFFF; /* White Text on Hover */
+}
+
+/* Active Link */
+nav ul li a.active {
+  background-color: #FFB703; /* Yellow-Orange Background for Active */
+  color: #023047; /* Dark Blue Text for Active */
+}
+/* Members Section */
+.members-section {
+  padding: 40px 20px;
+  background-color: #8ECAE6; /* Light Blue Background */
+  text-align: center;
+}
+
+.members-section h2 {
+  font-size: 2rem;
+  color: #023047; /* Dark Blue */
+  margin-bottom: 30px;
+}
+
+.members-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.member-card {
+  background-color: #FFFFFF; /* White Card */
+  border: 2px solid #219EBC; /* Medium Blue Border */
+  border-radius: 10px;
+  padding: 15px;
+  width: 250px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.member-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+.member-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.member-card h3 {
+  font-size: 1.2rem;
+  color: #023047; /* Dark Blue */
+  margin-bottom: 10px;
+}
+
+.member-card p {
+  font-size: 1rem;
+  color: #555; /* Neutral Gray */
+}
+/* More Members Link */
+.more-members-link {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #FFB703; /* Yellow-Orange */
+  color: #FFFFFF; /* White Text */
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.more-members-link:hover {
+  background-color: #FB8500; /* Bright Orange on Hover */
+  transform: translateY(-2px);
+}
+/* Footer General Styles */
+.footer {
+  background-color: #023047;
+  color: #FFFFFF;
+  padding: 40px 20px;
+  font-size: 0.9rem;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.footer-container div {
+  flex: 1 1 calc(25% - 20px);
+  min-width: 250px;
+}
+
+.footer h3 {
+  font-size: 1.2rem;
+  border-bottom: 2px solid #FFB703;
+  display: inline-block;
+  margin-bottom: 10px;
+}
+
+.footer p {
+  line-height: 1.6;
+}
+
+.footer ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer ul li {
+  margin: 10px 0;
+}
+
+.footer ul li a {
+  color: #8ECAE6;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer ul li a:hover {
+  color: #FFB703;
+}
+
+/* Social Media Icons */
+.footer-social .social-icons {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+.footer-social .social-icons a {
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+  background-color: #8ECAE6;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s;
+  text-decoration: none;
+}
+.footer-social .social-icons .material-icons {
+  font-size: 20px;
+  color: white; /* Make the icon white */
+}
+
+.footer-social .social-icons a:hover {
+  background-color: #FFB703;
+}
+
+.footer-social .social-icons img {
+  width: 16px;
+  height: 16px;
+}
+
+/* Footer Bottom */
+.footer-bottom {
+  text-align: center;
+  margin-top: 20px;
+  border-top: 1px solid #8ECAE6;
+  padding-top: 10px;
+  font-size: 0.85rem;
+}
+
+.footer-bottom p {
+  margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .footer-container {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .footer-container div {
+      flex: 1 1 100%;
+      text-align: center;
+  }
+}
+/* About Section */
+.about-section {
+  padding: 100px 20px;
+  background: linear-gradient(135deg, #ffffff, #f9f9f9);
+}
+
+/* About Container */
+.about-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 50px;
+}
+
+/* About Image Container */
+.about-image-container {
+  position: relative;
+  max-width: 500px;
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  border-radius: 15px;
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.1);
+}
+
+.about-image {
+  width: 100%;
+  border-radius: 15px;
+  object-fit: cover;
+  transition: transform 0.7s ease, opacity 0.7s ease;
+}
+
+.about-image-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 15px;
+  transform: translateX(-100%);
+  opacity: 0;
+  transition: transform 0.7s ease, opacity 0.7s ease;
+}
+
+.about-image-container:hover .about-image {
+  transform: scale(1.1);
+  opacity: 0.5;
+}
+
+.about-image-container:hover .about-image-overlay {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+/* About Content */
+.about-content {
+  max-width: 600px;
+  text-align: left;
+}
+
+.about-content h2 {
+  font-size: 3rem;
+  margin-bottom: 25px;
+  color: #333;
+  position: relative;
+}
+
+.about-content h2::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  width: 80px;
+  height: 4px;
+  background-color: #007bff;
+  border-radius: 5px;
+}
+
+.about-content p {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+/* Statistics Section */
+.about-stats {
+  display: flex;
+  justify-content: space-between;
+  margin: 30px 0;
+}
+
+.stat {
+  text-align: center;
+}
+
+.stat h3 {
+  font-size: 2.5rem;
+  color: #007bff;
+  margin-bottom: 10px;
+}
+
+.stat p {
+  font-size: 1rem;
+  color: #555;
+}
+
+/* About Button */
+.about-button {
+  display: inline-block;
+  padding: 15px 30px;
+  background-color: #007bff;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 30px;
+  font-size: 1rem;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.about-button:hover {
+  background-color: #0056b3;
+  box-shadow: 0 8px 20px rgba(0, 91, 187, 0.5);
+}

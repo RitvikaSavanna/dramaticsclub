@@ -1,0 +1,178 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#backgroundCanvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Ensure it stays behind the content */
+    background: linear-gradient(135deg, #023047, #219ebc); /* Fallback for browsers without canvas support */
+}
+
+/* Content Styling */
+.content {
+    position: relative;
+    z-index: 1; /* Places content above the canvas */
+
+    font-family: 'Arial', sans-serif;
+}
+header {
+    text-align: center;
+    padding: 2rem;
+    background-color: #023047;
+    color: white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    font-family: 'Poppins', sans-serif;
+    color: #FFB703;
+    font-size: 2rem;
+    letter-spacing: 1px;
+}
+
+/* Production Section */
+.productions-section {
+    padding: 60px 20px;
+    
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    margin-top: 40px;
+}
+
+.productions-section h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #023047;
+    margin-bottom: 40px;
+}
+
+.productions-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.production-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    border-radius: 10px;
+    width: 350px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background: #fff;
+}
+
+.production-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+/* General Card Styling */
+.production-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    border-radius: 10px;
+    width: 350px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background: #fff;
+    position: relative; /* Ensures the hover effects stay confined */
+    overflow: hidden; /* Prevents overflow from child elements */
+}
+
+/* Hover Effect */
+.production-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Focus Effect (Keyboard Navigation) */
+.production-card:focus-within {
+    outline: none; /* Removes default outline */
+    box-shadow: 0 6px 12px rgba(0, 123, 255, 0.4); /* Adds a subtle blue glow */
+    transform: translateY(-10px);
+}
+ 
+
+/* Responsive Design for Cards */
+@media (max-width: 600px) {
+    .production-card {
+        width: 100%; /* Makes the card adapt to smaller screens */
+    }
+}
+
+.production-image {
+    width: 100%;
+    height: 200px; 
+    overflow: hidden;
+    border-radius: 10px 10px 0 0;
+    position: relative;
+}
+
+.production-image img {
+    width: 100%;
+    height: 200px; 
+    object-fit: cover; /* Ensures the image fully covers the container without distortion */
+    border-radius: 10px 10px 0 0;
+}
+
+.production-info {
+    padding: 20px 15px;
+    width: 100%;
+    text-align: center;
+    border-radius: 0 0 10px 10px; 
+}
+
+.production-info h3 {
+    font-size: 1.5rem;
+    color: #023047;
+    margin-bottom: 10px;
+}
+
+.production-info p {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.6;
+}
+
+/* Footer Styling */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #023047;
+    color: white;
+    margin-top: 40px;
+}
+
+footer p {
+    font-size: 1rem;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .productions-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .production-card {
+        width: 80%;
+        margin-bottom: 20px;
+    }
+
+    .production-info h3 {
+        font-size: 1.3rem;
+    }
+}

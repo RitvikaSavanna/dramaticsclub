@@ -3,7 +3,212 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VITC DRAMATICS CLUB</title>
+    <title>Dramatics Club</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="shortcut icon" type="image/x-icon" href="logo.jpg" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
 </head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>Dramatics Club</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#">About us</a></li>
+                <li><a href="production.html">Productions</a></li>
+                <li><a href="members.html">Members</a></li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        
+        <div class="gallery-container" id="gallery-container">
+            <button class="scroll-button left" onclick="scrollGallery(-1)">&#10094;</button>
+            <div class="gallery" id="gallery">
+                <img src="gp1.jpg" alt="Description of Image 1">
+                <img src="gp2.jpg" alt="Description of Image 2">
+                <img src="gp3.jpg" alt="Description of Image 3">
+                <img src="gp4.jpg" alt="Description of Image 4">
+                <img src="club expo.png" alt="Description of Image 5">
+                <img src="expo.png" alt="Description of Image 6">
+                <img src="iit madras.png" alt="Description of Image 7">
+                <img src="drama league winners.png" alt="Description of Image 8">
+                <img src="rivera.png" alt="Description of Image 9">
+            </div>
+            <button class="scroll-button right" onclick="scrollGallery(1)">&#10095;</button>
+        </div>
+        <section class="about-section" id="about">
+            <div class="about-container">
+                <!-- Image Side -->
+                <div class="about-image-container">
+                    <img src="logo.jpg" alt="Dramatic Scene 1" class="about-image">
+                </div>
+        
+                <!-- Content Side -->
+                <div class="about-content">
+                    <h2>About Us</h2>
+                    <p>
+                        Welcome to the Dramatics Club – where passion meets performance. As a collective of dreamers, storytellers, and artists, we aim to redefine what it means to bring stories to life.
+                    </p>
+                    <p>
+                        Our mission is to push boundaries, inspire audiences, and build a community united by the love for drama. Whether it’s the high-energy buzz of a street play or the intricate beauty of a stage performance, every production is a labor of love and dedication.
+                    </p>
+                    <p>
+                        Through collaboration, creativity, and courage, we continue to explore the magic of storytelling, turning moments into memories and dreams into reality.
+                    </p>
+                    <div class="about-stats">
+                        <div class="stat">
+                            <h3>50+</h3>
+                            <p>Productions Performed</p>
+                        </div>
+                        <div class="stat">
+                            <h3>200+</h3>
+                            <p>Members Joined</p>
+                        </div>
+                        <div class="stat">
+                            <h3>10+</h3>
+                            <p>Years of Excellence</p>
+                        </div>
+                    </div>
+                    <a href="#contact" class="about-button">Join Us</a>
+                </div>
+            </div>
+        </section>
+        
+        <section class="intro-section">
+        <div class="intro-content">
+            <img src="drama league winners.png" alt="Dramatic Performance" class="intro-image">
+            <div class="intro-text">
+                <h2>Drama League</h2>
+                <p>ULTIMATE SHOWDOWN! Drama that we are sure you haven't seen like.Here we have multiple teams competing for the top spot with their own themes.Team leads lead the way to success!!</p>
+                <a href="#">Read More</a>
+            </div>
+        </div>
+        </section>
+        <section class="intro-section">
+            <div class="intro-content">
+                <img src="nukkad.jpg" alt="Dramatic Performance" class="intro-image">
+                <div class="intro-text">
+                    <h2>Nukkad Natak</h2>
+                    <p>A nukkad natak (or street play) is a form of theatrical performance that typically takes place in public spaces like streets or markets. It is a popular form of folk theater in India, often used for spreading social messages or raising awareness about various issues, such as health, politics, or education.</p>
+                    <a href="#">Read More</a>
+                </div>
+            </div>
+        </section>
+        <section class="members-section">
+            <h2>Meet Our Members</h2>
+            <div class="members-container">
+              <div class="member-card">
+                <img src="harshit.png" alt="Member 1">
+                <h3>Harshit Chaudhary</h3>
+                <p>Leading with passion, guiding us to success with integrity and vision..</p>
+              </div>
+              <div class="member-card">
+                <img src="aayushi.png" alt="Member 2">
+                <h3>Aayushi Malode</h3>
+                <p>Bringing creativity to every project, inspiring us to push boundaries.</p>
+              </div>
+              <div class="member-card">
+                <img src="ojas.png" alt="Member 3">
+                <h3>Ojas Kulkarni</h3>
+                <p>Designing dreams, our creative lead infusing projects with imaginative ideas</p>
+              </div>
+            </div>
+            <a href="members.html" class="more-members-link">See More Members</a>
+          </section>
+          
+        <section class="news-section">
+            <h2>Latest News</h2>
+            <div class="news-container">
+                <article class="news-article">
+                    <h3>Annual Drama Festival</h3>
+                    <p>The VITC Dramatics Club is hosting its annual drama festival this December, featuring performances by students and alumni.</p>
+                    <a href="#">Read More</a>
+                </article>
+                <article class="news-article">
+                    <h3>Workshops for Beginners</h3>
+                    <p>Join our beginner-friendly workshops to learn the basics of acting, scriptwriting, and stage direction. Open to all!</p>
+                    <a href="#">Read More</a>
+                </article>
+                <article class="news-article">
+                    <h3>New Members Induction</h3>
+                    <p>Welcome our new members for the year 2024! Check out the list of fresh talent joining our team.</p>
+                    <a href="#">Read More</a>
+                </article>
+                
+            </div>
+        </section>
+        <!-- Contact Me Section -->
+        <section class="contact-section">
+            <h2>Contact Me</h2>
+            <p>If you have any questions or would like to get in touch, feel free to contact us!</p>
+            
+        <form class="contact-form"
+        action="https://formspree.io/f/mgvvyrdb"
+        method="POST"
+      >
+      <div class="form-group"><label for="name">Name</label>
+        <input type="text" id="name" name="name" placeholder="Your Name" required>
+      </div>
+      <div class="form-group">
+            <label for="email">Your email:</label>
+            <input type="email" name="email" placeholder="Your Email" required>
+      </div>
+      <div class="form-group">
+            <label for="message">Your message:</label>
+            <textarea id="message" name="message" rows="5" placeholder="Your Message "required></textarea>
+      </div>
+        
+        <!-- your other form fields go here -->
+        <button type="submit" class="contact-button">Send</button>
+      </form>
+    </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+<footer class="footer">
+    <div class="footer-container">
+        <!-- About Section -->
+        <div class="footer-about">
+            <h3>About Us</h3>
+            <p>We are a team of creative individuals dedicated to delivering exceptional performances and captivating audiences worldwide.</p>
+        </div>
+
+        <!-- Navigation Links -->
+        <div class="footer-links">
+            <h3>Quick Links</h3>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="members.html">Our Members</a></li>
+                <li><a href="production.html">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+
+        <!-- Contact Information -->
+        <div class="footer-contact">
+            <h3>Contact</h3>
+            <p>Email: vitcdramaticsclub@gmail.com </p>
+            <p>Phone: +91 9884946025</p>
+            <p>Location: VIT chennai, Kelambakkam</p>
+        </div>
+
+        <!-- Social Media Links -->
+        <div class="footer-social">
+            <h3>Follow Us</h3>
+            <div class="social-icons">
+                <a href="https://www.instagram.com/vitcdramaticsclub/" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.linkedin.com/company/dramatics-club-vit-chennai/posts/?feedView=all" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+    </div>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <p>&copy; 2024 VITC Dramatics Club. All Rights Reserved. | Designed with ❤️ by Ritvika</p>
+    </div>
+</footer>
+
+</html>
